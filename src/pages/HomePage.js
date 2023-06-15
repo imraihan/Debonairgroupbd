@@ -35,7 +35,8 @@ const HomePage = () => {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
-        <Tabs value={selectedTab !== '' ? selectedTab : 0} onChange={handleTabChange}>
+        <Tabs value={selectedTab !== '' ? selectedTab : -1} onChange={handleTabChange} >
+          <Tab label="Home" value={-1}/>
           <Tab label="Admin" value={0}/>
           <Tab label="User" value={1}/>
         </Tabs>
