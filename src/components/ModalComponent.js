@@ -1,0 +1,26 @@
+import React from 'react';
+import { Modal, Box } from '@mui/material';
+
+const ModalComponent = ({ open, onClose, title, children }) => {
+  return (
+    <Modal open={open} onClose={onClose}>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 400,
+          bgcolor: 'background.paper',
+          boxShadow: 24,
+          p: 4,
+        }}
+      >
+        <h2>{title}</h2>
+        {children}
+      </Box>
+    </Modal>
+  );
+};
+
+export default ModalComponent;
