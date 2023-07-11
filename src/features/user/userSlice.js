@@ -106,7 +106,6 @@ const userSlice = createSlice({
         state.error = action.error.message;
       })
 
-       // Add the case for updating the employee
        .addCase(updateEmployee.pending, (state) => {
         state.loading = true;
         state.error = null;
